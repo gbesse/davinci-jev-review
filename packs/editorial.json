@@ -1,0 +1,7 @@
+{
+  "id": "editorial-v1",
+  "issues": [
+    { "id": "unsupported_claim", "label": "Unsupported claim", "instructions": "Does a caption make a material factual guarantee without evidence in the supplied transcript?", "markAbove": 0.75, "color": "Red" },
+    { "id": "unclear_reference", "label": "Unclear reference", "instructions": "Does a caption rely on an ambiguous pronoun or reference that makes the spoken point unclear?", "markAbove": 0.8, "color": "Yellow" }
+  ]
+}

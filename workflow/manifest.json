@@ -1,7 +1,7 @@
 {
   "id": "org.jev.resolve-review",
   "name": "Jev Review",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Typed transcript review with exact timeline markers",
   "main": "index.html"
 }

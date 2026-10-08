@@ -1,6 +1,6 @@
 {
   "name": "davinci-jev-review",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Exact-timecode typed Jev review for DaVinci Resolve",
   "type": "module",
   "scripts": { "test": "node --test", "check": "node --check src/*.js workflow/*.js && node --test", "demo": "node src/demo.js" },

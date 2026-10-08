@@ -16,7 +16,9 @@ export function parseSrt(text) {
     const [start, end] = rows[index].split('-->').map(part => part.trim().split(/\s+/)[0]);
     const value = rows.slice(index + 1).join(' ').trim();
     if (!value) continue;
-    captions.push({ id: `caption_${captions.length + 1}`, start: toSeconds(start), end: toSeconds(end), text: value });
+    const startSeconds = toSeconds(start), endSeconds = toSeconds(end);
+    if (endSeconds <= startSeconds) throw new TypeError(`Invalid SRT interval: ${start} --> ${end}`);
+    captions.push({ id: `caption_${captions.length + 1}`, start: startSeconds, end: endSeconds, text: value });
   }
   if (!captions.length) throw new TypeError('No captions found');
   if (captions.length > 255) throw new TypeError('Review accepts at most 255 captions per pass');
@@ -44,6 +46,7 @@ export function buildLocationRequest(captions, issues) {
 }
 
 export function markerPlan(captions, issues, response, { frameRate = 24 } = {}) {
+  if (!Number.isFinite(frameRate) || frameRate <= 0) throw new TypeError('frameRate must be positive');
   const byId = new Map(captions.map(caption => [caption.id, caption]));
   return issues.flatMap(issue => {
     const answer = response?.answers?.[issue.id]; const caption = answer?.type === 'choice' ? byId.get(answer.choice) : null;

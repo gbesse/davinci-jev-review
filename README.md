@@ -28,3 +28,7 @@ Invalid or zero-length SRT intervals and nonpositive frame rates are rejected be
 Les intervalles SRT invalides ou de durée nulle et les fréquences d’images non positives sont refusés avant la génération de marqueurs. Lancez `npm test` sans installer Resolve.
 
 Los intervalos SRT inválidos o de duración nula y las frecuencias de imagen no positivas se rechazan antes de generar marcadores. Ejecute `npm test` sin instalar Resolve.
+
+## Contrôle d’adoption · Adoption check · Comprobación de adopción
+
+[Français : essayer un cas concret](examples/adoption-check.md) · [English: try a concrete case](examples/adoption-check.md) · [Español: pruebe un caso concreto](examples/adoption-check.md).

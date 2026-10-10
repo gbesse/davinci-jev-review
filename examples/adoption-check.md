@@ -40,3 +40,15 @@ FR : adaptez une copie de la fixture locale à cette situation, puis vérifiez l
 EN: adapt a copy of the local fixture to this situation, then check the behavior described above. Values are illustrative, not measured Jev output.
 
 ES: adapte una copia de la fixture local a esta situación y compruebe el comportamiento descrito arriba. Los valores son ilustrativos, no resultados Jev medidos.
+
+## Second cas · Second case · Segundo caso
+
+```text
+allowed_caption_ids=[caption_1]; returned_choice=caption_99
+```
+
+**FR :** Une réponse qui cite un identifiant hors des sous-titres soumis doit être rejetée avant la création du plan de marqueurs.
+
+**EN:** A response citing an ID outside the submitted captions must be rejected before building the marker plan.
+
+**ES:** Una respuesta que cita un ID fuera de los subtítulos enviados debe rechazarse antes de crear el plan de marcadores.
